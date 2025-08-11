@@ -145,7 +145,7 @@ body {
 .producto__precio {
     font-weight: bold; /* Negrita para el precio */
     color: var(--color-textprice); /* Color del precio */
-    margin: 10px 0; /* Espaciado vertical */
+    margin: 20px 0; /* Espaciado vertical */
     font-size: 18px; /* Tamaño de la fuente del precio */
 }
 
