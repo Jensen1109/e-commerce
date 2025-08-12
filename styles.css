@@ -96,6 +96,7 @@ body {
     border-radius: 3px; /* Bordes redondeados */
     text-align: center;
 }
+
 /* Estilos para la sección de productos */
 .productos {
     display: flex;
@@ -124,8 +125,14 @@ body {
 /* Estilos para la imagen del producto */
 .producto__image {
     height: 150px; /* Altura fija de la imagen */
+    border-radius: 5px;
     object-fit: cover; /* Mantiene la proporción de la imagen */
     margin-bottom: 10px; /* Espaciado inferior */
+    transition: transform 1s ;
+}
+
+.producto__image:hover {
+    transform: scale(1.2);
 }
 
 /* Estilos para el título del producto */
@@ -164,27 +171,4 @@ body {
     color: var(--color-text); /* Color del texto blanco */
     text-align: center; /* Centra el texto */
     padding: 20px; /* Espaciado vertical */
-}
-
-/* Estilos responsivos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .producto {
-        width: 48%; /* Ancho del producto en pantallas pequeñas */
-        margin: 1%; /* Espaciado entre productos */
-    }
-}
-
-/* Estilos responsivos para pantallas muy pequeñas */
-@media (max-width: 480px) {
-    .header__logo, .header__nav {
-        float: none; /* Elimina el flotante */
-        width: 100%; /* Ancho completo */
-        text-align: center; /* Centra el contenido */
-        padding: 10px; /* Espaciado interno */
-    }
-    
-    .producto {
-        width: 98%; /* Ancho del producto en pantallas muy pequeñas */
-        margin: 1%; /* Espaciado entre productos */
-    }
 }
