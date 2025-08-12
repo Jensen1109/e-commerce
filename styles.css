@@ -1,174 +1,192 @@
+/*VARIABLES GLOBALES */
 :root {
+    /* Color de fondo del encabezado */
     --color-background-header: #333;
+
+    /* Color de fondo al hacer hover en navegación */
     --color-hover-nav: #555;
+
+    /* Color de texto general */
     --color-text: #fff;
+
+    /* Color de texto en productos */
     --color-text-product: #000;
+
+    /* Color de texto en el encabezado */
     --color-text-header: #333;
+
+    /* Color de fondo de los productos */
     --color-background-product: #ffffff;
+
+    /* Color de fondo del botón en el banner */
     --color-background-botton-banner: #333;
+
+    /* Color del precio del producto */
     --color-textprice: rgb(58, 157, 238);
+
+    /* Color de fondo del pie de página */
     --color-background-footer: #333;
+
+    /* Color de fondo del botón en productos */
     --color-background-product-botton: #333;
+
+    /* Color de fondo del cuerpo */
     --color-background-body: #e8fbfd;
 }
-/* Normaliza el margen y el padding de todos los elementos, y establece el box-sizing para que el padding y el borde se incluyan en el ancho y alto total */
+
+/*ESTILOS BASE */
 * {
-    margin: 0; /* Elimina el margen por defecto */
-    padding: 0; /* Elimina el padding por defecto */
-    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
-    font-family:Tahoma; /* Establece la fuente por defecto */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina relleno por defecto */
+    box-sizing: border-box; /* Incluye borde y relleno en el tamaño total */
+    font-family: Tahoma; /* Fuente principal */
 }
-/* Establece el fondo y el color del texto del cuerpo */
+
 body {
-    background-color: var(--color-background-body); /* Color de fondo claro */
-    color: var(--color-text); /* Color del texto oscuro */
-    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+    background-color: var(--color-background-body); /* Fondo del cuerpo */
+    color: var(--color-text); /* Color de texto general */
+    line-height: 1.6; /* Altura de línea para legibilidad */
 }
-/* Estilos para el encabezado de la página */
+
+/*ENCABEZADO */
 .header {
-    display: flex;
-    background-color: var(--color-background-header); /* Color de fondo oscuro */
-    color: var(--color-text); /* Color del texto blanco */
-    padding: 15px 1px; /* Espaciado vertical en el encabezado */
+    display: flex; /* Distribuye elementos en línea */
+    background-color: var(--color-background-header); /* Fondo del header */
+    color: var(--color-text); /* Color de texto */
+    padding: 15px 1px; /* Espaciado interno */
 }
 
-/* Estilos para el logo en el encabezado */
 .header__logo {
-    justify-content: flex-start;
-    width: 30%; /* Ancho del logo */
-    padding-left: 20px; /* Espaciado a la izquierda */
-    font-size: 24px; /* Tamaño de la fuente del logo */
-    font-weight: bold; /* Negrita para el logo */
+    justify-content: flex-start; /* Alineación izquierda */
+    width: 30%; /* Ocupa 30% del ancho */
+    padding-left: 20px; /* Espaciado izquierdo */
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
 }
 
-/* Estilos para la barra de navegación en el encabezado */
 .header__nav {
-    justify-content: flex-end;
-    width: 70%; /* Ancho de la barra de navegación */
-    text-align: right; /* Alinea el texto a la derecha */
-    padding-right: 20px; /* Espaciado a la derecha */
-    margin-top: 7px;
+    justify-content: flex-end; /* Alineación derecha */
+    width: 70%; /* Ocupa 70% del ancho */
+    text-align: right; /* Texto alineado a la derecha */
+    padding-right: 20px; /* Espaciado derecho */
+    margin-top: 7px; /* Margen superior */
 }
 
-/* Estilos para los enlaces de navegación */
 .header__nav-link {
-    color: var(--color-text); /* Color del texto blanco */
+    color: var(--color-text); /* Color de texto */
     text-decoration: none; /* Sin subrayado */
-    padding: 20px; /* Espaciado interno para los enlaces */
-}
-
-/* Efecto hover para los enlaces de navegación */
-.header__nav-link:hover {
-    background-color: var(--color-hover-nav); /* Color de fondo al pasar el ratón */
-    border-radius: 3px; /* Bordes redondeados */
-}
-/* Estilos para la sección del banner */
-.banner {
-    display: flex;
-    background-color: var(--color-textprice); /* Color de fondo azul claro */
-    color: var(--color-text); /* Color del texto blanco */
-    padding: 140px 700px; /* Espaciado interno */
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Estilos para el título del banner */
-.banner__title {
-    font-size: 28px; /* Tamaño de la fuente del título */
-    text-align: center;
-}
-
-/* Estilos para la descripción del banner */
-.banner__description {
-    font-size: 16px; /* Tamaño de la fuente de la descripción */
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-
-/* Estilos para el botón en el banner */
-.banner__btn {
-    width: 180px;
-    background-color: var(--color-background-botton-banner); /* Color de fondo oscuro */
-    color: var(--color-text); /* Color del texto blanco */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    text-decoration: none; /* Sin subrayado */
-    border-radius: 3px; /* Bordes redondeados */
-    text-align: center;
-}
-
-/* Estilos para la sección de productos */
-.productos {
-    display: flex;
-    flex-wrap: wrap;
     padding: 20px; /* Espaciado interno */
-    justify-content: space-evenly;
 }
 
-/* Estilos para cada producto */
+.header__nav-link:hover {
+    background-color: var(--color-hover-nav); /* Fondo al hacer hover */
+    border-radius: 3px; /* Bordes redondeados */
+}
+
+/*BANNER PRINCIPAL */
+.banner {
+    display: flex; /* Flexbox */
+    background-color: var(--color-textprice); /* Fondo del banner */
+    color: var(--color-text); /* Color de texto */
+    padding: 140px 700px; /* Espaciado interno */
+    flex-wrap: wrap; /* Permite envolver contenido */
+    justify-content: center; /* Centra elementos */
+}
+
+.banner__title {
+    font-size: 28px; /* Tamaño de título */
+    text-align: center; /* Centrado */
+}
+
+.banner__description {
+    font-size: 16px; /* Tamaño de descripción */
+    text-align: center; /* Centrado */
+    padding-bottom: 50px; /* Espaciado inferior */
+    padding-top: 50px; /* Espaciado superior */
+}
+
+.banner__btn {
+    width: 180px; /* Ancho del botón */
+    background-color: var(--color-background-botton-banner); /* Fondo del botón */
+    color: var(--color-text); /* Color de texto */
+    padding: 10px 20px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 3px; /* Bordes redondeados */
+    text-align: center; /* Centrado */
+}
+
+/*SECCIÓN DE PRODUCTOS */
+.productos {
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* Envoltura */
+    padding: 20px; /* Espaciado interno */
+    justify-content: space-evenly; /* Distribución uniforme */
+}
+
 .producto {
-    width: 300px; /* Ancho del producto */
-    margin: 30px; /* Espaciado entre productos */
-    background-color: var(--color-background-product); /* Color de fondo blanco */
+    width: 300px; /* Ancho de tarjeta */
+    margin: 30px; /* Margen externo */
+    background-color: var(--color-background-product); /* Fondo */
     border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra */
     padding: 50px; /* Espaciado interno */
-    text-align: center; /* Centra el texto dentro del producto */
-    color: var(--color-text-product);
-    transition: transform 0.3s;
+    text-align: center; /* Centrado */
+    color: var(--color-text-product); /* Color de texto */
+    transition: transform 0.3s; /* Animación al hacer hover */
 }
 
-.producto:hover{
-    transform: scale(1.1);
+.producto:hover {
+    transform: scale(1.1); /* Escala al hacer hover */
 }
 
-/* Estilos para la imagen del producto */
 .producto__image {
-    height: 150px; /* Altura fija de la imagen */
-    border-radius: 5px;
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-    margin-bottom: 10px; /* Espaciado inferior */
-    transition: transform 1s ;
+    height: 150px; /* Altura de imagen */
+    border-radius: 5px; /* Bordes redondeados */
+    object-fit: cover; /* Ajuste de imagen */
+    margin-bottom: 10px; /* Margen inferior */
+    transition: transform 1s; /* Animación */
 }
 
 .producto__image:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Escala al hacer hover */
 }
 
-/* Estilos para el título del producto */
 .producto__title {
-    font-size: 16px; /* Tamaño de la fuente del título */
-    margin-bottom: 10px; /* Espaciado inferior */
-    height: 40px; /* Altura fija para el título */
+    font-size: 16px; /* Tamaño de título */
+    margin-bottom: 10px; /* Margen inferior */
 }
 
-/* Estilos para la descripción del producto */
 .producto__description {
-    font-size: 14px; /* Tamaño de la fuente de la descripción */
-    margin-bottom: 10px; /* Espaciado inferior */
+    font-size: 14px; /* Tamaño de descripción */
+    margin-bottom: 10px; /* Margen inferior */
 }
 
-/* Estilos para el precio del producto */
 .producto__precio {
-    font-weight: bold; /* Negrita para el precio */
+    font-weight: bold; /* Negrita */
     color: var(--color-textprice); /* Color del precio */
-    margin: 20px 0; /* Espaciado vertical */
-    font-size: 18px; /* Tamaño de la fuente del precio */
+    margin: 20px 0; /* Margen vertical */
+    font-size: 18px; /* Tamaño de fuente */
 }
 
-/* Estilos para el botón de compra del producto */
-.producto__btn {
-    background-color: var(--color-background-product-botton); /* Color de fondo oscuro */
-    color: var(--color-text); /* Color del texto blanco */
-    padding: 14px 20px; /* Espaciado interno del botón */
+.producto__button--buy {
+    background-color: var(--color-background-product-botton); /* Fondo del botón */
+    color: var(--color-text); /* Color de texto */
+    padding: 14px 20px; /* Espaciado interno */
     text-decoration: none; /* Sin subrayado */
     border-radius: 10px; /* Bordes redondeados */
 }
 
-/* Estilos para el pie de página */
+/*PIE DE PÁGINA */
 .footer {
-    background-color: var(--color-background-footer); /* Color de fondo oscuro */
-    color: var(--color-text); /* Color del texto blanco */
-    text-align: center; /* Centra el texto */
-    padding: 20px; /* Espaciado vertical */
+    background-color: var(--color-background-footer); /* Fondo del footer */
+    color: var(--color-text); /* Color de texto */
+    text-align: center; /* Centrado */
+    padding: 20px; /* Espaciado interno */
+}
+
+/*Media querie para tablets desde 601px a 1024px*/
+@media (min-width: 601px) and (max-width: 1024px) {
+    .banner{
+        padding: 140px;
+    }
 }
